@@ -1,4 +1,4 @@
-package ru.filenko.client.controller;
+package ru.filenko.server.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +8,7 @@ import org.springframework.messaging.rsocket.RSocketRequester;
 import org.springframework.stereotype.Controller;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import ru.filenko.client.service.RSocketServerService;
+import ru.filenko.server.service.RSocketServerService;
 
 @Slf4j
 @Controller

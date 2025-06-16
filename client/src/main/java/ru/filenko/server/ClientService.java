@@ -1,4 +1,4 @@
-package ru.filenko.client;
+package ru.filenko.server;
 
 import io.rsocket.util.DefaultPayload;
 import lombok.extern.slf4j.Slf4j;

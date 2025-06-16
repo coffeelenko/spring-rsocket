@@ -1,4 +1,4 @@
-package ru.filenko.client.model;
+package ru.filenko.server.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

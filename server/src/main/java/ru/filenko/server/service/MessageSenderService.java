@@ -1,11 +1,10 @@
-package ru.filenko.client.service;
+package ru.filenko.server.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import ru.filenko.client.model.Notification;
+import ru.filenko.server.model.Notification;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

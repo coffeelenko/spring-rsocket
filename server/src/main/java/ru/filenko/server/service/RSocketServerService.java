@@ -1,4 +1,4 @@
-package ru.filenko.client.service;
+package ru.filenko.server.service;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Sinks;
-import ru.filenko.client.model.Notification;
+import ru.filenko.server.model.Notification;
 
 import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import static java.util.Objects.isNull;
@@ -20,7 +20,7 @@ import static java.util.Objects.isNull;
 @Service
 public class RSocketServerService {
     private static final String WELCOME_TEMPLATE = "Welcome to RSocket: %s";
-    private final Queue<String> newClientsQueue = new ConcurrentLinkedQueue<>();
+    private final Set<String> newClientsQueue = ConcurrentHashMap.newKeySet();
     @Getter
     private final Sinks.Many<Notification> sinks = Sinks.many().multicast().onBackpressureBuffer();
     @Getter
